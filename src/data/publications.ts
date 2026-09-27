@@ -6,6 +6,8 @@ export type Publication = {
     href: string;
     image?: string;
     pdfHref?: string;
+    date?: string;
+    external?: boolean;
 };
 
 export const publications: Publication[] = [
@@ -113,6 +115,8 @@ export const publications: Publication[] = [
 ];
 
 export const publicationsPage = {
+    eyebrow: "Research & Writing",
+    featuredHeading: "Featured Articles",
     title: "Student Publications",
     description:
         "Explore research and articles by our Junior Scientific Team, examining innovative approaches to water treatment, environmental sustainability, and global water challenges.",
