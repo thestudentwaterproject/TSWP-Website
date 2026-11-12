@@ -5,6 +5,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ScrollBackground } from "@/components/layout/ScrollBackground";
 import { ScrollReveal } from "@/components/layout/ScrollReveal";
 import { site } from "@/data/site";
+import { holidayTheme } from "@/data/holiday";
+import { Snowfall } from "@/components/holiday/Snowfall";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -54,6 +56,7 @@ export default function RootLayout({
         <Footer />
         <ScrollBackground />
         <ScrollReveal />
+        {holidayTheme && <Snowfall />}
       </body>
     </html>
   );

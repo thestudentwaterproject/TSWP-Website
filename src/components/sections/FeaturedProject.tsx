@@ -3,10 +3,14 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { PlaneBanner } from "./PlaneBanner";
+import { Confetti } from "@/components/ui/Confetti";
 
 export function FeaturedProject() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="relative overflow-hidden pt-52 pb-16 sm:pt-80 sm:pb-24">
+      <PlaneBanner message="Project deployment starting December 1st!" />
+      <Confetti />
       <Container>
         <SectionHeader
           eyebrow={featuredProject.eyebrow}
@@ -39,7 +43,7 @@ export function FeaturedProject() {
               {featuredProject.location}
             </p>
             <h3 className="mt-2 text-2xl font-bold text-navy sm:text-3xl">
-              {featuredProject.school}
+              {featuredProject.headline}
             </h3>
             <p className="mt-4 text-base leading-relaxed text-navy/70">
               {featuredProject.summary}

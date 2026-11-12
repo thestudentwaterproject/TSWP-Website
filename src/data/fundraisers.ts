@@ -10,40 +10,6 @@ export const fundraisersPage = {
 
 export const fundraiserInitiatives: FundraiserInitiative[] = [
   {
-    slug: "picture-book-project",
-    title: "TSWP Picture Book Project",
-    subtitle: "Call for Submissions",
-    type: "Fundraising Initiative",
-    date: "Book release around the holiday season",
-    location: "Online",
-    ledBy: "The Student Water Project",
-    status: "Accepting Submissions",
-    summary:
-      "The Student Water Project is collecting imaginative responses to water-themed questions from elementary students and turning them into a student designed picture book! All profits will go towards our clean water initiatives in Kisii, Kenya.",
-    details: [
-      "Elementary-aged students answer water-themed questions that encourage them to use their imagination. There are no limits to how they can answer — we want to hear funny, imaginative, unique, and unexpected ideas, whether they're silly, thoughtful, or completely made up!",
-      "Students write down their answers and submit their original water-themed stories or ideas through our Google Form. A parent or legal guardian must agree to the submission terms before the story can be included in the book.",
-      "TSWP will review the submissions and select approximately 10–15 creative and imaginative responses to be featured in the picture book.",
-      "Once the stories are selected, our student illustration team will bring each idea to life through original illustrations.",
-      "The finished book will be available for purchase around the holiday season, primarily online, with opportunities to share and sell it through libraries, bookstores, community events, and holiday pop-ups.",
-      "Sample prompts: Why is the ocean salty? Where does a river think it is going? Who designs every snowflake? What if you could ride a raindrop?",
-    ],
-    image: "/images/fundraisers/picture-book-project.jpg",
-    imageAlt:
-      "TSWP Picture Book call for submissions flyer with water droplet mascots and a blue storybook",
-    imageOrientation: "portrait",
-    primaryCta: {
-      label: "View the Flyer & All Prompts",
-      href: "/documents/tswp-picture-book-project.pdf",
-      external: true,
-    },
-    secondaryCta: {
-      label: "Download the Submission Worksheet",
-      href: "/documents/tswp-picture-book-worksheet.pdf",
-      external: true,
-    },
-  },
-  {
     slug: "12000-km-challenge",
     title: "12,000 KM Challenge",
     subtitle: "Virtual Running Fundraiser",
@@ -79,34 +45,6 @@ export const fundraiserInitiatives: FundraiserInitiative[] = [
     },
   },
 ];
-
-export const challengeHomePreview = {
-  title: "12,000 KM Challenge",
-  subtitle: "Virtual Running Fundraiser",
-  summary:
-    "The 12,000 KM Challenge was a global running initiative held August 2–9, 2026. Participants ran, walked, and cycled around the world, contributing their distance toward a collective goal of 12,000 km, representing the distance from Toronto to Kisii, Kenya. The challenge has concluded — thank you to everyone who took part!",
-  highlights: [
-    "3,504 km travelled by 60 participants",
-    "$12,367.63 raised — 123.6% of our $10,000 goal",
-    "161 donors and 5 sponsors and partners",
-  ],
-  primaryCta: {
-    label: "Learn More",
-    href: "/fundraisers",
-  },
-  externalCtas: [
-    {
-      label: "See Challenge Site",
-      href: externalLinks.challengeSite,
-      external: true,
-    },
-    {
-      label: "We're Still Accepting Donations!",
-      href: externalLinks.zeffyCampaign,
-      external: true,
-    },
-  ],
-};
 
 export const studentLeaderProgram = {
   title: "Become a Student Project Leader",

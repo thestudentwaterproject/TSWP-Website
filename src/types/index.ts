@@ -89,6 +89,9 @@ export interface Sponsor {
   name: string;
   /** Path under /public/images/sponsors/ */
   logo: string;
+  /** Intrinsic pixel size of the (trimmed) logo file */
+  width: number;
+  height: number;
   href?: string;
 }
 

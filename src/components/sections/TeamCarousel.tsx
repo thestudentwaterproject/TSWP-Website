@@ -10,8 +10,10 @@ interface TeamCarouselProps {
     className?: string;
 }
 
+// Bold, high-contrast arrows that sit on the left/right edges of the carousel.
 const arrowClass =
-    "inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-navy/15 bg-white text-navy transition-colors hover:border-water hover:text-water-dark disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-navy/15 disabled:hover:text-navy";
+    // vertically centred on the 4:3 photos: card width × 3/8 (2 cards on sm, 4 on lg)
+    "absolute z-10 hidden h-12 w-12 -translate-y-1/2 sm:top-[calc((100cqw-1.5rem)*0.1875)] lg:top-[calc((100cqw-4.5rem)*0.09375)] items-center justify-center rounded-full bg-navy text-white shadow-lg shadow-navy/30 ring-4 ring-white transition hover:scale-110 hover:bg-water-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water sm:inline-flex lg:h-14 lg:w-14";
 
 export function TeamCarousel({ members, className = "" }: TeamCarouselProps) {
     const trackRef = useRef<HTMLUListElement>(null);
@@ -21,9 +23,10 @@ export function TeamCarousel({ members, className = "" }: TeamCarouselProps) {
     const updateScrollState = useCallback(() => {
         const track = trackRef.current;
         if (!track) return;
-        setCanScrollPrev(track.scrollLeft > 4);
+        // allow for the track's 16px side padding / snap offset
+        setCanScrollPrev(track.scrollLeft > 24);
         setCanScrollNext(
-            track.scrollLeft + track.clientWidth < track.scrollWidth - 4,
+            track.scrollLeft + track.clientWidth < track.scrollWidth - 24,
         );
     }, []);
 
@@ -43,7 +46,7 @@ export function TeamCarousel({ members, className = "" }: TeamCarouselProps) {
     };
 
     return (
-        <div className={className}>
+        <div className={`@container relative ${className}`}>
             <ul
                 ref={trackRef}
                 onScroll={updateScrollState}
@@ -59,27 +62,26 @@ export function TeamCarousel({ members, className = "" }: TeamCarouselProps) {
                 ))}
             </ul>
 
-            {(canScrollPrev || canScrollNext) && (
-                <div className="mt-6 flex justify-center gap-3">
-                    <button
-                        type="button"
-                        onClick={() => scrollByCard(-1)}
-                        disabled={!canScrollPrev}
-                        aria-label="Previous team members"
-                        className={arrowClass}
-                    >
-                        <ChevronLeft className="h-5 w-5" />
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => scrollByCard(1)}
-                        disabled={!canScrollNext}
-                        aria-label="Next team members"
-                        className={arrowClass}
-                    >
-                        <ChevronRight className="h-5 w-5" />
-                    </button>
-                </div>
+            {/* Each arrow only shows when there's more to see in that direction. */}
+            {canScrollPrev && (
+                <button
+                    type="button"
+                    onClick={() => scrollByCard(-1)}
+                    aria-label="Previous team members"
+                    className={`${arrowClass} -left-3 lg:-left-7`}
+                >
+                    <ChevronLeft className="h-6 w-6" strokeWidth={2.5} />
+                </button>
+            )}
+            {canScrollNext && (
+                <button
+                    type="button"
+                    onClick={() => scrollByCard(1)}
+                    aria-label="Next team members"
+                    className={`${arrowClass} -right-3 lg:-right-7`}
+                >
+                    <ChevronRight className="h-6 w-6" strokeWidth={2.5} />
+                </button>
             )}
         </div>
     );

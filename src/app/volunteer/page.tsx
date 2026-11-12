@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { fundraiserInitiatives } from "@/data/fundraisers";
-
-const pictureBook = fundraiserInitiatives.find(
-    (initiative) => initiative.slug === "picture-book-project",
-);
 
 export const metadata: Metadata = {
     title: "Volunteer",
@@ -47,57 +41,10 @@ export default function VolunteerPage() {
 
                         <p className="mt-4 leading-7 text-navy/70">
                             We don&apos;t have any volunteer roles open at the moment, but
-                            there&apos;s still a great way to get involved — help us bring
-                            our student-created water education picture book to life.
+                            we&apos;d still love to hear from you. Check back soon for new
+                            opportunities.
                         </p>
                     </div>
-
-                    {pictureBook && (
-                        <div className="mx-auto mt-8 grid max-w-4xl gap-8 overflow-hidden rounded-3xl border border-navy/10 bg-white p-7 shadow-sm sm:p-9 lg:grid-cols-[2fr_3fr] lg:items-center">
-                            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-water/10 shadow-sm">
-                                <Image
-                                    src={pictureBook.image}
-                                    alt={pictureBook.imageAlt ?? pictureBook.title}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 1024px) 100vw, 40vw"
-                                />
-                            </div>
-
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-widest text-water-dark">
-                                    {pictureBook.subtitle}
-                                </p>
-                                <h3 className="mt-1 text-xl font-bold text-navy">
-                                    {pictureBook.title}
-                                </h3>
-
-                                <p className="mt-4 leading-7 text-navy/70">
-                                    {pictureBook.summary}
-                                </p>
-
-                                <div className="mt-6 flex flex-wrap gap-3">
-                                    {pictureBook.primaryCta && (
-                                        <Button
-                                            href={pictureBook.primaryCta.href}
-                                            external={pictureBook.primaryCta.external}
-                                        >
-                                            {pictureBook.primaryCta.label}
-                                        </Button>
-                                    )}
-                                    {pictureBook.secondaryCta && (
-                                        <Button
-                                            href={pictureBook.secondaryCta.href}
-                                            variant="outline"
-                                            external={pictureBook.secondaryCta.external}
-                                        >
-                                            {pictureBook.secondaryCta.label}
-                                        </Button>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    )}
 
                     <div className="mt-12 rounded-3xl bg-sky/10 p-8 text-center sm:p-12">
                         <h2 className="text-3xl font-bold text-navy">

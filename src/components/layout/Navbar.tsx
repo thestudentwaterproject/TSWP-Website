@@ -7,6 +7,8 @@ import { useState } from "react";
 
 import { ctaNav, mainNav } from "@/data/navigation";
 import { site } from "@/data/site";
+import { holidayTheme } from "@/data/holiday";
+import { NavLights } from "@/components/holiday/NavLights";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
@@ -19,6 +21,7 @@ export function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 border-b border-navy/8 bg-page/90 backdrop-blur-md">
+            {holidayTheme && <NavLights />}
             <Container className="flex h-16 items-center justify-between gap-4 lg:h-18">
                 <Link
                     href="/"

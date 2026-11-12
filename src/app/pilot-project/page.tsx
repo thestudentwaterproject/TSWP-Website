@@ -274,7 +274,7 @@ export default function PilotProjectPage() {
 
       <CTA
         title="Support the Kenya Water Project Expansion"
-        description="Every contribution is matched dollar-for-dollar by partner organizations, doubling its impact."
+        description="Every contribution brings safe drinking water closer for the students and staff of Rianyabayo Memorial Academy."
         primaryCta={{ label: "Donate", href: externalLinks.donate }}
         secondaryCta={{ label: "Become a Sponsor", href: "/sponsorships" }}
         variant="gradient"

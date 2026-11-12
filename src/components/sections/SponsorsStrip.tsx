@@ -17,23 +17,25 @@ export function SponsorsStrip() {
           align="center"
           className="mb-10"
         />
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {currentSponsors.map((sponsor) => (
-            <li
-              key={sponsor.name}
-              className="flex min-h-36 items-center justify-center rounded-2xl border border-navy/8 bg-water/5 px-6 py-5 text-center"
-            >
-              <div className="relative h-24 w-full">
+        {/* Logos sit directly on the page. Each is sized so its area is about
+            equal: wide wordmarks get shorter, square marks get taller. */}
+        <ul className="flex flex-wrap items-center justify-center gap-x-12 gap-y-10 [--logo-h:88px] sm:gap-x-16 sm:[--logo-h:120px]">
+          {currentSponsors.map((sponsor) => {
+            const scale = 1 / Math.sqrt(sponsor.width / sponsor.height);
+            return (
+              <li key={sponsor.name} className="flex items-center">
                 <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 15vw"
+                  width={sponsor.width}
+                  height={sponsor.height}
+                  className="w-auto max-w-[80vw] transition-transform duration-300 hover:scale-105"
+                  style={{ height: `calc(${scale.toFixed(3)} * var(--logo-h))` }}
+                  sizes="(max-width: 640px) 80vw, 360px"
                 />
-              </div>
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ul>
       </Container>
     </section>

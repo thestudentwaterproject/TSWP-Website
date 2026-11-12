@@ -23,6 +23,13 @@ export const teamMembers: TeamMember[] = [
         imagePosition: "center 20%",
     },
     {
+        name: "Gabriel Bran",
+        role: "CFO",
+        bio: "Gabriel Bran is an Integrated Science, Mathematics and Statistics student at Western University. He first joined TSWP as a project management student on our Entrepreneurship Team and has since stepped up into an executive role as CFO. We're thrilled to have him on board!",
+        image: "/images/team/gabriel-bran.png",
+        imagePosition: "center 25%",
+    },
+    {
         name: "Grace Churney",
         role: "CMO",
         bio: "Grace Churney is a chemical engineering student at McMaster University. Along with her experience as the chair of London Ontario's Relay for Life, she is a local artist and graphic designer.",

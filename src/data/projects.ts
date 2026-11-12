@@ -5,11 +5,12 @@ export const featuredProject = {
   slug: "pilot-project",
   eyebrow: "Featured Project",
   title: "Kenya Water Project Expansion",
+  headline: "WE DID IT! Thank you for your support",
   school: "Rianyabayo Memorial Academy",
   location: "Nyamesocho, Kenya",
   summary:
-    "An award-winning pilot UV water treatment system, developed in partnership with Mitacs, Clear Inc., and MW Technologies, proved that safe drinking water can be delivered effectively. However, limited storage and system capacity mean the current system cannot meet full demand.",
-  goal: "The Student Water Project aims to expand this proven solution to ensure reliable access to clean water for the entire school.",
+    "BIG NEWS! We have officially raised over $25,000 in monetary and in-kind donations, and our project will begin deployment on December 1st, 2026. Together, we're expanding the award-winning pilot UV water treatment system to bring reliable access to clean water to the entire school.",
+  goal: "We are so grateful to everyone who has supported our pilot project. Follow along on our journey — we'll be documenting every step of the way!",
   // TODO: Replace with real project photo from Wix/export
   image: "/images/project-kenya.jpg",
   href: "/pilot-project",
@@ -23,7 +24,7 @@ export const pilotProject: PilotContent = {
   region: "Kisii County, Kenya",
   intro: [
     "Access to safe drinking water remains a serious challenge in many underserved rural schools. At Rianyabayo Memorial Academy in Kisii County, Kenya, students and staff continue to face risks from unsafe water, and limited sanitation and hygiene infrastructure.",
-    "An award-winning pilot water treatment system, integrating biosand filtration with ultraviolet light-emitting diode (UV LED) disinfection and developed in 2024 in partnership with Mitacs, Clear Inc., and MW Technologies, proved that safe drinking water can be delivered effectively in underserved rural schools. However, rapid growth in the pupil population, coupled with limited storage and system capacity, means the current system cannot meet overall demand.",
+    "An award-winning pilot water treatment system, integrating biosand filtration with ultraviolet light-emitting diode (UV LED) disinfection and developed in 2024 in partnership with Mitacs and MW Technologies, proved that safe drinking water can be delivered effectively in underserved rural schools. However, rapid growth in the pupil population, coupled with limited storage and system capacity, means the current system cannot meet overall demand.",
     "In addition, students and staff rely on overcrowded and unhygienic pit latrines, with lack of handwashing facilities. These conditions significantly increase the risk of waterborne and sanitation-related diseases, including dysentery, cholera, and urinary tract infections.",
     "The Student Water Project aims to scale up and upgrade the existing proven system to address capacity and infrastructure limitations, ensuring reliable access to safe drinking water and improved sanitation for the entire school community.",
   ],
@@ -49,15 +50,14 @@ export const pilotProject: PilotContent = {
   solutionIntro:
     "This project builds directly on a proven and successful existing pilot system by addressing key challenges related to capacity, reliability, water safety, and long-term sustainability through targeted upgrades to both water and sanitation infrastructure.",
   solutionBody: [
-    "In partnership with Clear Inc. in Canada, and A Drop of Hope, a local NGO in Kenya focused on providing safe water to communities, the project will upgrade and scale the existing water treatment system to ensure reliable access to safe drinking water throughout the year: i) Storage capacity will be increased through the installation of additional water storage tanks to maximize rainwater harvesting during wet periods, increase capacity and ensure a consistent supply of water; ii) to strengthen treatment performance, an advanced, long-life 10,000-hour UV LED disinfection unit will replace the current 1,000-hour system, significantly improving durability, operational efficiency, and pathogen inactivation under variable water quality conditions; iii) power stability will be improved by installing an additional solar panel to increase energy generation and an extra battery to enhance storage capacity, ensuring consistent UV system operation even under variable solar conditions. Operation and maintenance capacity will be enhanced through strengthened monitoring, timely biosand filter maintenance, and improved protection of system components; iv) recognizing that safe drinking water alone is not sufficient, the project will also upgrade sanitation and hygiene infrastructure. This includes improving the pit latrine conditions, expanding access to functional handwashing stations with reliable water and soap, and promoting improved hygiene practices across the school community.",
+    "In partnership with A Drop of Hope, a local NGO in Kenya focused on providing safe water to communities, the project will upgrade and scale the existing water treatment system to ensure reliable access to safe drinking water throughout the year: i) Storage capacity will be increased through the installation of additional water storage tanks to maximize rainwater harvesting during wet periods, increase capacity and ensure a consistent supply of water; ii) to strengthen treatment performance, an advanced, long-life 10,000-hour UV LED disinfection unit will replace the current 1,000-hour system, significantly improving durability, operational efficiency, and pathogen inactivation under variable water quality conditions; iii) power stability will be improved by installing an additional solar panel to increase energy generation and an extra battery to enhance storage capacity, ensuring consistent UV system operation even under variable solar conditions. Operation and maintenance capacity will be enhanced through strengthened monitoring, timely biosand filter maintenance, and improved protection of system components; iv) recognizing that safe drinking water alone is not sufficient, the project will also upgrade sanitation and hygiene infrastructure. This includes improving the pit latrine conditions, expanding access to functional handwashing stations with reliable water and soap, and promoting improved hygiene practices across the school community.",
     "These integrated interventions will establish a more resilient, safe, and sustainable WASH system, reducing exposure to disease, improving school attendance, and supporting better health and learning outcomes for students and staff.",
   ],
   fundraisingMethod: [
     "Funding for this project is generated through structured, student-run initiatives. These include organized fundraising campaigns within schools, merchandise launches designed by students, direct outreach for donations and sponsorships, and community-based events developed in partnership with local organizations. Each initiative is planned and executed by student teams, providing both funding and hands-on project management experience.",
-    "All funds raised through these student-led efforts are matched dollar-for-dollar by Clear Inc., effectively doubling the impact of every contribution and ensuring that projects can be fully implemented with the required infrastructure, materials, and technical support.",
   ],
   implementationIntro:
-    "The project will be implemented in a phased and coordinated approach to ensure effective upgrading of the water, sanitation, and hygiene (WASH) system, while minimizing disruption to school activities. Implementation will be carried out in close collaboration with Clear Inc. and A Drop of Hope, alongside school management and technical partners.",
+    "The project will be implemented in a phased and coordinated approach to ensure effective upgrading of the water, sanitation, and hygiene (WASH) system, while minimizing disruption to school activities. Implementation will be carried out in close collaboration with A Drop of Hope, alongside school management and technical partners.",
   phases: [
     {
       phase: 1,
@@ -113,7 +113,7 @@ export const pilotProject: PilotContent = {
   summary: [
     "Access to safe drinking water is essential, yet students at Rianyabayo Memorial Academy still face daily risks due to system limitations.",
     "This project builds on a proven solution to deliver reliable, long-term access to clean water through expanded storage, improved treatment, and better sanitation.",
-    "By supporting this initiative, you are directly improving student health, attendance, and quality of life, while helping scale a model that can impact other communities. Every contribution is matched, doubling its impact and bringing us closer to sustainable access to safe water for all.",
+    "By supporting this initiative, you are directly improving student health, attendance, and quality of life, while helping scale a model that can impact other communities. Every contribution brings us closer to sustainable access to safe water for all.",
   ],
   figures: [
     {

@@ -71,6 +71,195 @@ body {
   }
 }
 
+/* Plane flyover — used by components/sections/PlaneBanner */
+.plane-flyover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transform: translateX(-100%);
+  will-change: transform;
+}
+
+.plane-flyover .plane-body {
+  animation: plane-bob 2.4s ease-in-out infinite;
+}
+
+.plane-flyover .plane-banner {
+  animation: banner-wave 1.6s ease-in-out infinite;
+}
+
+.plane-banner {
+  position: relative;
+  padding: 0.85rem 2.75rem 0.85rem 2rem;
+  background: #fff;
+  border: 2px solid var(--water);
+  border-radius: 4px 2px 2px 4px;
+  box-shadow: 0 6px 16px rgb(0 0 0 / 0.12);
+  clip-path: polygon(0 0, 100% 8%, 100% 92%, 0 100%, 3% 50%);
+  transform-origin: right center;
+}
+
+.plane-banner--large {
+  padding: 1.1rem 3.5rem 1.1rem 2.5rem;
+  border-width: 3px;
+}
+
+/* Polaroid garland — used by components/sections/PilotProjectSupport */
+.polaroid {
+  padding: 12px 12px 0;
+  background-color: #f1f1ef;
+  background-image:
+    radial-gradient(rgb(0 0 0 / 0.05) 0.6px, transparent 0.8px),
+    radial-gradient(rgb(0 0 0 / 0.035) 0.6px, transparent 0.8px);
+  background-size: 9px 9px, 13px 13px;
+  background-position: 0 0, 4px 6px;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.08),
+    0 12px 24px -8px rgb(12 35 64 / 0.25);
+}
+
+.polaroid-sway {
+  transform-origin: top center;
+  animation: polaroid-sway 5s ease-in-out infinite;
+}
+
+@keyframes polaroid-sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+.xmas-bulb {
+  animation: bulb-twinkle 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px var(--bulb));
+}
+
+@keyframes bulb-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px var(--bulb));
+  }
+  50% {
+    opacity: 0.45;
+    filter: drop-shadow(0 0 1px var(--bulb));
+  }
+}
+
+/* Hanging hero ornaments — used by components/holiday/HangingOrnaments */
+.ornament-swing {
+  transform-origin: top center;
+  animation: ornament-swing 4s ease-in-out infinite;
+}
+
+@keyframes ornament-swing {
+  0%,
+  100% {
+    rotate: -4deg;
+  }
+  50% {
+    rotate: 4deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polaroid-sway,
+  .xmas-bulb,
+  .ornament-swing {
+    animation: none;
+  }
+}
+
+/* Holiday teaser — used by components/sections/HolidaySleigh */
+.sparkle {
+  animation: sparkle-twinkle 2.8s ease-in-out infinite both;
+  filter: drop-shadow(0 0 4px rgb(255 214 102 / 0.6));
+}
+
+@keyframes sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    scale: 0.3;
+    rotate: 0deg;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+    rotate: 90deg;
+  }
+}
+
+.holiday-shimmer {
+  background: linear-gradient(
+    100deg,
+    #b8860b 0%,
+    #e0b13a 30%,
+    #fff6d5 45%,
+    #e0b13a 60%,
+    #b8860b 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: holiday-shimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 6px rgb(184 134 11 / 0.25));
+}
+
+@keyframes holiday-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle {
+    animation: none;
+    opacity: 0.85;
+  }
+  .holiday-shimmer {
+    animation: none;
+    background-position: 50% 0;
+  }
+}
+
+@keyframes plane-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+}
+
+@keyframes banner-wave {
+  0%,
+  100% {
+    transform: skewY(0deg) translateY(0);
+  }
+  50% {
+    transform: skewY(-1.5deg) translateY(2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plane-flyover .plane-body,
+  .plane-flyover .plane-banner {
+    animation: none;
+  }
+}
+
 /* Scroll reveal — classes are added by components/layout/ScrollReveal */
 .reveal {
   opacity: 0;

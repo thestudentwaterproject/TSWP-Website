@@ -50,27 +50,33 @@ export const sponsorPackages: SponsorPackage[] = [
 
 export const currentSponsors: Sponsor[] = [
   {
-    name: "Clear Inc.",
-    logo: "/images/sponsors/clear.png",
-  },
-  {
     name: "A Drop of Hope",
     logo: "/images/sponsors/a-drop-of-hope.webp",
+    width: 265,
+    height: 177,
   },
   {
     name: "WaterSprint",
     logo: "/images/sponsors/watersprint.png",
+    width: 281,
+    height: 76,
   },
   {
     name: "BCA",
     logo: "/images/sponsors/bca.png",
+    width: 1807,
+    height: 512,
   },
   {
     name: "Xatoms",
     logo: "/images/sponsors/xatoms.png",
+    width: 378,
+    height: 361,
   },
   {
     name: "Finan",
     logo: "/images/sponsors/finan.png",
+    width: 108,
+    height: 77,
   },
 ];

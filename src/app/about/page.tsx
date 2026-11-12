@@ -23,8 +23,10 @@ export default function AboutPage() {
             : member,
     );
 
-    const executiveMembers = adjustedTeamMembers.slice(0, 6);
-    const advisoryMembers = adjustedTeamMembers.slice(6);
+    // Senior mentors/advisors go in their own row; every student stays in the carousel.
+    const isSenior = (role: string) => /senior/i.test(role);
+    const executiveMembers = adjustedTeamMembers.filter((m) => !isSenior(m.role));
+    const advisoryMembers = adjustedTeamMembers.filter((m) => isSenior(m.role));
 
     return (
         <div className="relative overflow-hidden bg-[#e8f4fc]">

@@ -1,5 +1,6 @@
 import { impactStats } from "@/data/stats";
 import { Container } from "@/components/ui/Container";
+import { CountUp } from "@/components/ui/CountUp";
 
 export function ImpactStats() {
   return (
@@ -9,7 +10,7 @@ export function ImpactStats() {
           {impactStats.map((stat) => (
             <li key={stat.label} className="text-center lg:text-left">
               <p className="text-4xl font-bold text-water-light sm:text-5xl">
-                {stat.value}
+                <CountUp value={stat.value} />
               </p>
               <p className="mt-2 text-lg font-semibold">{stat.label}</p>
               {stat.description && (

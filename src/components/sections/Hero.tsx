@@ -2,10 +2,14 @@ import { externalLinks, site } from "@/data/site";
 import { BackgroundVideo } from "@/components/sections/BackgroundVideo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { holidayTheme } from "@/data/holiday";
+import { HangingOrnaments } from "@/components/holiday/HangingOrnaments";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900">
+    <section
+      data-snow-zone
+      className="relative min-h-[85vh] overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900">
       {/* Falls back to the gradient bg above if video fails or reduced motion is preferred */}
       <BackgroundVideo />
 
@@ -13,6 +17,8 @@ export function Hero() {
         className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-blue-950/65 to-cyan-900/40"
         aria-hidden="true"
       />
+
+      {holidayTheme && <HangingOrnaments />}
 
       <Container className="relative z-10 flex min-h-[85vh] items-center py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-4xl text-center">
